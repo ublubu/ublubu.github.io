@@ -1,0 +1,153 @@
+#public/cache/cache_ct_a_main_flash_higher.jpg
+ct pop flash to A main
+[ct,a,flashbang]
+
+#public/cache/cache_squeaky_smoke_flash.jpg
+smoke quad and flash from squeaky
+[t,squeaky,flashbang,smoke]
+
+#public/cache/cache_ct_a_main_flash.jpg
+ct pop flash to A main
+[ct,a,flashbang]
+
+#public/cache/cache_a_main_molly.jpg
+A main molotov
+[ct,a,molotov]
+
+#public/cache/cache_vent_molly.jpg
+vent molotov from long A
+[t,mid,molotov]
+
+#public/cache/cache_ct_boost_nade.jpg
+nade boost from highway
+[ct,grenade]
+
+#public/cache/cache_catwalk_smoke.jpg
+catwalk smoke from long A
+[t,a,smoke]
+
+#public/cache/cache_b_main_flash.jpg
+B main rush flash
+[t,b,flashbang,essential]
+
+#public/cache/cache_heaven_flash_zbox.jpg
+Z rotator flash through B heaven
+[ct,b,flashbang]
+
+#public/cache/cache_ct_a_main_smoke_site.jpg
+smoke A main from behind red
+[ct,a,smoke]
+
+#public/cache/cache_headshot_default_molly.jpg
+molotov B default and headshot
+[t,b,molotov,essential]
+
+#public/cache/cache_whitebox_molly.jpg
+molotov B tribox
+[t,b,molotov]
+
+#public/cache/cache_crisscross_smokes.jpg
+criss-cross mid smokes
+[t,mid,smoke,essential]
+
+#public/cache/cache_deny_plant_b_molly.jpg
+molotov default and back default plants on B
+[ct,b,molotov,experimental]
+
+#public/cache/cache_ct_tree_b_main_smoke.jpg
+smoke B main from tree
+[ct,b,smoke,experimental]
+
+#public/cache/cache_ct_b_from_tree_flash.jpg
+flash B default from tree
+[ct,b,flashbang,experimental]
+
+#public/cache/cache_highway_a_smoke.jpg
+smoke highway/truck from A main
+[t,a,smoke,essential]
+
+#public/cache/cache_ct_boost_molotov.jpg
+molotov boost from sandbags
+[ct,mid,molotov]
+
+#public/cache/cache_ct_mid_smoke_highway.jpg
+smoke mid main from highway
+[ct,mid,smoke]
+
+#public/cache/cache_t_a_main_flash.jpg
+T pop flash out close side of A main (fork, catwalk)
+[t,a,flashbang]
+
+#public/cache/cache_ct_b_main_smoke.jpg
+smoke B main from B floor
+[ct,b,smoke]
+
+#public/cache/cache_ct_a_main_flash_site.jpg
+pop flash A main from red
+[ct,a,flashbang]
+
+#public/cache/cache_ct_b_floor_flash.jpg
+pop flash through tree smoke (B retake)
+[ct,b,flashbang]
+
+#public/cache/cache_ct_checkers_flash.jpg
+pop flash B main from checkers
+[ct,b,flashbang]
+
+#public/cache/cache_heaven_smoke.jpg
+smoke heaven from B main
+[t,b,smoke]
+
+#public/cache/cache_t_midmain_flash.jpg
+pop flash out mid main from behind mid red
+[t,mid,flashbang,essential]
+
+#public/cache/cache_tree_smoke.jpg
+smoke tree from B main
+[t,b,smoke,essential]
+
+#public/cache/cache_ct_b_main_smoke_heaven.jpg
+smoke B main from heaven
+[ct,b,smoke]
+
+#public/cache/cache_ct_a_counterflash_highway.jpg
+counterflash from highway to A red
+[ct,a,flashbang]
+
+#public/cache/cache_ct_a_main_smoke_truck.jpg
+smoke A main from truck
+[ct,a,smoke]
+
+#public/cache/cache_spawn_to_z_highwaybox.jpg
+smoke Z (red) or highway box (blue) from T spawn
+[t,mid,smoke,essential]
+
+#public/cache/cache_ct_mid_smoke.jpg
+smoke mid main from Z
+[ct,mid,smoke]
+
+#public/cache/cache_b_pop_flash.jpg
+B main to B site pop flash
+[t,b,flashbang]
+
+#public/cache/cache_heaven_behind_smoke_smoke.jpg
+smoke heaven from B main when B main is smoked
+[t,b,smoke]
+
+#public/cache/cache_sandbags_molly.jpg
+molotov sandbags from mid main/boost
+[t,mid,molotov,essential]
+
+#public/cache/cache_boost_oneway_smoke.jpg
+boost one-way smoke
+[t,mid,smoke]
+
+#public/cache/cache_ct_a_main_smoke_quad.jpg
+smoke A main from quad corner
+[ct,a,smoke]
+
+#public/cache/cache_forklift_smoke.jpg
+smoke forklift from A main
+[t,a,smoke]
+
+

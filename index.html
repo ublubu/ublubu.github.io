@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Kynan Rilee - Home</title>
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="header">
+        <h1>Kynan Rilee</h1>
+        <a href="./">Home</a>
+        <a href="https://github.com/ublubu">GitHub</a>
+        <a href="https://ublubu.tumblr.com">Blog</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./resume.pdf">Résumé</a>
+      </header>
+      <div id="content">
+        
+  <h3>Web App Development with GHCJS and reflex-dom</h3>
+
+
+<div class="info">
+    May 11, 2016
+</div>
+
+
+<p>I’m working on finding client-side best practices for developing modern web apps in Haskell, specifically using reflex-dom, a new functional reactive programming (FRP) library for browser-side apps.</p>
+<p>Here’s a post about <a href="https://ublubu.tumblr.com/post/144208331227/client-side-routing-in-reflex-dom-notes-1">client-side routing as a microcosm of client-side app architecture in general</a>.</p>
+<p>Server-side I’m using servant, persistent, esqueleto, cookie, and clientsession.</p>
+<p>Source code: <a href="https://github.com/ublubu/webapp-reflex">webapp-reflex</a></p>
+
+
+  <h3>2D Physics in Haskell</h3>
+
+
+<div class="info">
+    April  4, 2016
+</div>
+
+
+<p><a href="https://github.com/ublubu/shapes">shapes</a> is a constraint-based physics engine that currently features convex polygons, non-penetration with baumgarte stabilization, friction, solution caching, static and non-rotating objects, and AABB broadphase elimination. It’s based on GDC slide decks I found online.</p>
+<p>I’ve had great success optimizing the engine. The current demo comfortably handles 225 objects (1000-2000 constraints) at 100fps. I accomplished this primarily by:</p>
+<ul>
+<li>optimizing special-case matrix multiplication</li>
+<li>using Template Haskell to generate vector arithmetic code with unboxed numbers</li>
+<li>changing my solver algorithm to allow caching in unboxed vectors</li>
+<li>pervasive inlining</li>
+<li>caching some shape queries for contact generation</li>
+</ul>
+<p>There are still more optimizations I can implement. For example, there are some ideas from <a href="http://bulletphysics.org">Bullet</a> that I’d like to try. And I haven’t even started parallelizing things yet.</p>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/DYzf4zBK90o?list=PLmozfF6FosKjmPMnlPoVbWosiExbD0SUF" frameborder="0" allowfullscreen>
+</iframe>
+<p>This project has been a fun experience in incrementally growing a codebase from a simple core. In addition to pursuing better performance, I also plan to add support for new shapes, new constraints, and new developer interfaces (game physics EDSL?).</p>
+<p>Source code: <a href="https://github.com/ublubu/shapes">shapes</a></p>
+
+
+  <h3>Works in Progress</h3>
+
+
+<div class="info">
+    January 31, 2016
+</div>
+
+
+<h4 id="csgo-nade-guides-ghcjs-reflex-dom-servant">CS:GO Nade Guides (ghcjs, reflex-dom, servant)</h4>
+<p>The first version is <a href="./nades">here</a>. (Type “cache”. Click the thumbnails to zoom in.)</p>
+<p>It’s a client-only single-page app that fetches a <a href="./nades/public/cache.txt">simple text format</a> via XHR, parses it, and provides a UI for the result. I designed it this way so I could write guides in a normal text editor and host everything on GitHub.</p>
+<p>I’m still working on a second version, which will be a complete web app. In its current state:</p>
+<ul>
+<li>Authed CRUD for Nades and NadeLists using servant (servant-server + persistent + esqueleto, ghcjs-servant-client)</li>
+<li>Cookie-based sessions using clientsession</li>
+<li>Authentication via Google Sign-In button</li>
+<li>Barebones web UI for sign-in and interacting with Nades endpoints</li>
+</ul>
+<p>Source code: <a href="https://github.com/ublubu/csgo-guides">csgo-guides</a></p>
+<h4 id="tile-rider-web-app">Tile Rider Web App</h4>
+<p>I’m working on a web (servant, ghcjs + reflex-dom) version of my Tile Rider game. I want users to be able to create, play, and share puzzles. So far, I’ve written some client-side code for game and editor UI.</p>
+
+
+  <h3>Haskell Project for LeapYear.io</h3>
+
+
+<div class="info">
+    December 23, 2015
+</div>
+
+
+<p>I worked a consulting job for LeapYear where I implemented streaming versions of some of their differentially private machine learning algorithms. Previously, these algorithms were limited to datasets that fit in memory. My implementations made it possible to process datasets of any size.</p>
+<p>In addition to the streaming machine-learning algorithms, I also implemented streaming (and randomized) database interfaces and a streaming blocked join. I used pipes and pipes-group for streaming, HDBC for database access, and criterion and HUnit for benchmarking and testing.</p>
+
+
+  <h3>Attending Oregon Programming Languages Summer School (OPLSS 2015)</h3>
+
+
+<div class="info">
+    June 28, 2015
+</div>
+
+
+<p>OPLSS has left me with a lot to think about. I have a new interest now in programming languages (vs programming <em>in</em> a language) as an approach to solving programming problems.</p>
+<p>I came across OPLSS via <a href="http://purelytheoretical.com/sywtltt.html">purelytheoretical</a> after I decided to learn some type theory:</p>
+<p>I was talking to my dad about functional programming in Haskell, and I realized I wasn’t sure what to do with something like a heterogeneous list. After I went home, I found this <a href="https://en.wikibooks.org/wiki/Haskell/Existentially_quantified_types">wikibooks article about existential types</a>.</p>
+
+
+  <h3>Tile Rider - A Puzzle Game in Haskell</h3>
+
+
+<div class="info">
+    May 12, 2015
+</div>
+
+
+<p><a href="https://github.com/ublubu/tile-rider">Tile Rider</a> is my first Haskell project. It’s a barebones puzzle game implemented using SDL.</p>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/CEqgA0ZRA-o" frameborder="0" allowfullscreen>
+</iframe>
+<p>I like the mechanic, so I might revisit this as a web (+ mobile?) project. Learning to write some Clojure would be fun.</p>
+<p>Source code: <a href="https://github.com/ublubu/tile-rider">tile-rider</a></p>
+
+
+  <h3>Yahoo Magazines Frontend Team (Feb 2014 - Mar 2015)</h3>
+
+
+<div class="info">
+    March 10, 2015
+</div>
+
+
+<p>I worked at Yahoo for just over a year on the digital magazines (platform) team. I wrote JavaScript (with React) for the nodejs server and the web client.</p>
+<p><a href="http://www.yahoo.com/style">Yahoo Style</a>, <a href="http://www.yahoo.com/food">Yahoo Food</a>, <a href="http://www.yahoo.com/tech">Yahoo Tech</a>, <a href="http://www.yahoo.com/beauty">Yahoo Beauty</a>, <a href="http://www.yahoo.com/movies">etc</a></p>
+<p>In addition to my feature work, I applied principles from functional programming to create design patterns that eliminate avenues for complexity and bugs. I wrote <a href="http://ublubu.tumblr.com/post/109544244542/a-reactive-perspective-on-flux">this blog post</a><sup>1</sup> explaining one important pattern after my team used it for a few months.</p>
+<p>The most important application of my design patterns was my integration of a particularly awkward ad service. The original implementation was fragile and made it difficult to add new ad configurations to our magazines.</p>
+<p>My encapsulation of the ad service made it possible to implement multiple new ad configurations without increasing code complexity. Furthermore, engineers on my team could now quickly add or modify ad configurations without deep knowledge of the underlying service. Ad integration issues also became much simpler to debug.</p>
+<p>Another team actually picked up my ad integration code and maintained it as a library for other Yahoo properties to use.</p>
+<p><sup>1</sup>My blog post: <a href="http://ublubu.tumblr.com/post/109544244542/a-reactive-perspective-on-flux">A Reactive Perspective on Flux</a></p>
+
+
+  <h3>functipede - Flow Graphs in JavaScript</h3>
+
+
+<div class="info">
+    May 26, 2014
+</div>
+
+
+<p><a href="https://github.com/ublubu/functipede">functipede</a> is a set of tools for composing flow graphs in JavaScript. I model all flow graphs (even single nodes) each as a set of input callbacks and a set of output callbacks. This makes it simple to compose a flow graph from smaller pieces. In addition to graph composition, I’ve implemented tools for creating both stateful and stateless nodes/graphs from functions.</p>
+<p>Source code: <a href="https://github.com/ublubu/functipede">functipede</a></p>
+<p>I’ve been working with Robert Timpe on implementing a C++ game engine as a flow graph. I think it might be possible to use C++ template metaprogramming to make Intel TBB’s flow graph library easier to use by making graph composition look like function composition. I wrote functipede as a quick prototype to see if I actually wanted to write flow graphs that way.</p>
+<p>I used functipede for a few days, but I found it very difficult to keep track of the edges in and out of a graph. The abstraction seems usable, but the tooling is definitely not. I think something like Unreal Engine 4’s Blueprint graphical scripting might be what’s needed to make graph-building code fun.</p>
+<p><em>UPDATE:</em> Later on, I came across <a href="https://en.wikipedia.org/wiki/Arrow_(computer_science)">arrows</a> and an associated syntax implemented for Haskell. I haven’t tried it yet, but I would like to use Yampa (arrowized functional reactive programming) for a game one day.</p>
+
+
+  <h3>Microsoft Mediaroom (Jun 2012 - Aug 2013), Ericsson Mediaroom (Sep 2013 - Jan 2014)</h3>
+
+
+<div class="info">
+    February  1, 2014
+</div>
+
+
+<p>I developed an automated system for user-configured reports on our big data platform (Azure, C#, Hadoop). It allowed non-technical users, including Mediaroom clients, to safely configure, generate, and view reports using a variety of data sources, metrics, and drill-downs. The system also allowed us to support new data formats without code changes or redeployment.</p>
+<p>I wrote and owned a large portion of the system, including the code for managing our SQL and Hive databases, compiling report configurations to Hive, and everything else between reading a report configuration, parsing and processing logs, and uploading the result.</p>
+<p>I also wrote a metadata-comparing recommendations feature called “More Like This” that we used in the TV product. I experimented with a more complex algorithm using feature vectors obtained from user ratings, but I left the company before I could investigate recommendations further.</p>
+
+
+  <h3>Microsoft Summer Internship (Jun 2011 - Aug 2011)</h3>
+
+
+<div class="info">
+    September  1, 2011
+</div>
+
+
+<p>I co-created the Tile Puzzle app with Michael Montazeri using HTML5 and JavaScript for Windows 8. I was invited to //build/ as a panelist for a discussion about the Windows 8 app development experience but was unable to attend.</p>
+<p>The app itself was based on the 15-puzzle, but we made it special by supporting video, slideshows, and webcam as the puzzle visuals. It’s quite a different game when the pictures on the tiles are constantly changing.</p>
+
+
+
+
+      </div>
+      <div id="footer">
+        Site generated by
+        <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+      </div>
+    </div>
+  </body>
+</html>
