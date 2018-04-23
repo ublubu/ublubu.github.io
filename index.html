@@ -12,12 +12,47 @@
         <h1>Kynan Rilee</h1>
         <a href="./">Home</a>
         <a href="https://github.com/ublubu">GitHub</a>
-        <a href="https://ublubu.tumblr.com">Blog</a>
+        <a href="https://medium.com/@kynan.rilee">Medium blog</a>
+        <a href="https://ublubu.tumblr.com">Tumblr blog</a>
         <a href="./contact.html">Contact</a>
         <a href="./resume.pdf">Résumé</a>
       </header>
       <div id="content">
         
+  <h3>Koki Technology Co-founder (Oct 2017 - Feb 2018)</h3>
+
+
+<div class="info">
+    February 23, 2018
+</div>
+
+
+<p>I built a CI system (inspired by Drone) that runs user-defined pipelines of containerized (Docker) tasks. It installs with a single <code>kubectl</code> command and integrates with both GitHub and Bitbucket repositories. I also developed an embedded DSL for defining more complex container pipelines in Haskell.</p>
+<p>I built the first automated installer for Hyperledger Fabric (blockchain platform) on Kubernetes. Pre-existing techniques required that users manually reconfigure each worker node in their Kubernetes cluster (a workaround for <code>kube-dns</code>), but I found that Docker-in-Docker obviates this need.</p>
+<p>We also created <a href="https://github.com/koki/short">koki/short</a>, a compact file format for Kubernetes manifests. One major feature is the <a href="https://docs.koki.io/short/modules/">modules system</a> that I added.</p>
+<p>28 technical blog posts on <a href="https://medium.com/@kynan.rilee">Medium</a>. Some examples:</p>
+<ul>
+<li><a href="https://medium.com/kokster/understanding-hyperledger-sawtooth-proof-of-elapsed-time-e0c303577ec1">What is “Proof of Elapsed Time” for blockchain?</a></li>
+<li><a href="https://medium.com/kokster/mount-volumes-into-a-running-container-65a967bee3b5">Messing around with mount namespaces in Docker</a></li>
+<li><a href="https://medium.com/kokster/mutable-strings-in-golang-298d422d01bc">Messing around with reflection in Golang</a></li>
+<li><a href="https://medium.com/kokster/a-user-friendly-encoding-json-for-golang-d5ebb4ebbdf1">Small details can dramatically improve developer experience in Golang</a></li>
+<li><a href="https://medium.com/kokster/postgresql-on-kubernetes-the-right-way-part-one-d174ee8a56e3">Architectural concerns for PostgreSQL on Kubernetes</a></li>
+<li><a href="https://medium.com/kokster/fun-with-multi-stage-dockerfiles-7da7f11403d2">Multi-stage Dockerfiles for private repos and leaner images</a></li>
+</ul>
+
+
+  <h3>Waze Carpool iOS Team (Aug 2016 - Oct 2017)</h3>
+
+
+<div class="info">
+    October 11, 2017
+</div>
+
+
+<p>I worked on the Waze Rider iOS app for Waze Carpool at Google. I used mostly Objective-C and some Swift.</p>
+<p>In addition to feature work, I also worked on our build, release, and monitoring automation and refactoring our codebase for better maintenance, testing, and sharing of code.</p>
+
+
   <h3>Web App Development with GHCJS and reflex-dom</h3>
 
 
@@ -27,7 +62,7 @@
 
 
 <p>I’m working on finding client-side best practices for developing modern web apps in Haskell, specifically using reflex-dom, a new functional reactive programming (FRP) library for browser-side apps.</p>
-<p>Here’s a post about <a href="https://ublubu.tumblr.com/post/144208331227/client-side-routing-in-reflex-dom-notes-1">client-side routing as a microcosm of client-side app architecture in general</a>.</p>
+<p>Here’s a post about <a href="https://ublubu.tumblr.com/post/144208331227/client-side-routing-in-reflex-dom-notes-1">client-side app architecture from the perspective of client-side routing</a>.</p>
 <p>Server-side I’m using servant, persistent, esqueleto, cookie, and clientsession.</p>
 <p>Source code: <a href="https://github.com/ublubu/webapp-reflex">webapp-reflex</a></p>
 
